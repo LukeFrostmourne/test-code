@@ -8,6 +8,10 @@ def hello_world():
 @app.route('/version')
 def print_version():
     return 'python3.5 flask0.10'
+    
+@app.route('/login/<username>')
+def auth(username):
+    return 'User %s login' % username
 
 import optparse
 def flaskrun(app, default_host="127.0.0.1", default_port="5000"):
