@@ -5,6 +5,10 @@ app = Flask(__name__)
 def hello_world():
     return 'hello world ! welcome to use marathon v2'
     
+@app.route('/healthcheck')
+def healthcheck():
+    return 'alive'
+    
 @app.route('/version')
 def print_version():
     return 'python3.5 flask0.10'
